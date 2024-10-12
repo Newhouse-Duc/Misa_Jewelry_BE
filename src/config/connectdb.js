@@ -1,11 +1,11 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 const sequelize = new Sequelize(
-    process.env.DATABASE_NAME,
-    process.env.DATABASE_USER,
-    process.env.DATABASE_PASSWORD,
+    'sql12737294',
+    'sql12737294',
+    'w5abIUAa39',
     {
-        host: process.env.DATABASE_HOST,
+        host: 'sql12.freemysqlhosting.net',
         dialect: 'mysql'
     }
 );
