@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('jwt_backend_nodejs', 'root', null, {
-    host: 'localhost',
+const sequelize = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, {
+    host: process.env.DATABASE_HOST,
     dialect: 'mysql'
 });
 
@@ -17,3 +17,4 @@ const connection = async () => {
 
 
 export default connection;
+
