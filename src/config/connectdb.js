@@ -1,11 +1,14 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
+const { Sequelize } = require('sequelize');
+
 const sequelize = new Sequelize(
-    'sql12737294',
-    'sql12737294',
-    'w5abIUAa39',
+    'sql12737410',
+    'sql12737410',
+    'diBqnA84cH',
     {
         host: 'sql12.freemysqlhosting.net',
+        port: 3306,
         dialect: 'mysql'
     }
 );

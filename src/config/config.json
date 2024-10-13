@@ -18,10 +18,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "sql12737294",
-    "password": "w5abIUAa39",
-    "database": "sql12737294",
+    "username": "sql12737410",
+    "password": "diBqnA84cH",
+    "database": "sql12737410",
     "host": "sql12.freemysqlhosting.net",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
