@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "jwt_backend_nodejs",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "username": "postgres.eykjuikivnsqniowvchi",
+    "password": "Duynhat2020@",
+    "database": "postgres",
+    "host": "aws-0-ap-southeast-1.pooler.supabase.com",
+    "port": 6543,
+    "dialect": "postgres",
     "define": {
       "freezeTableName": true
     },
@@ -18,11 +19,15 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "sql12737410",
-    "password": "diBqnA84cH",
-    "database": "sql12737410",
-    "host": "sql12.freemysqlhosting.net",
-    "port": 3306,
-    "dialect": "mysql"
+    "username": "postgres.eykjuikivnsqniowvchi",
+    "password": "Duynhat2020@",
+    "database": "postgres",
+    "host": "aws-0-ap-southeast-1.pooler.supabase.com",
+    "port": 6543,
+    "dialect": "postgres",
+    "define": {
+      "freezeTableName": true
+    },
+    "logging": false
   }
 }

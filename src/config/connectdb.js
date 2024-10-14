@@ -1,17 +1,15 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
-const { Sequelize } = require('sequelize');
-
 const sequelize = new Sequelize(
-    'sql12737410',
-    'sql12737410',
-    'diBqnA84cH',
+    process.env.DATABASE_NAME,
+    process.env.DATABASE_USER,
+    process.env.DATABASE_PASSWORD,
     {
-        host: 'sql12.freemysqlhosting.net',
-        port: 3306,
-        dialect: 'mysql'
+        host: process.env.DATABASE_HOST,
+        dialect: 'postgres'
     }
 );
+
 
 
 const connection = async () => {
