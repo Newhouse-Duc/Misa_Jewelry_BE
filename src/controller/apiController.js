@@ -2,12 +2,7 @@ import { DatabaseError } from 'sequelize'
 import customerServices from '../service/customerServices'
 
 
-const testApi = (req, res) => {
-    return res.status(200).json({
-        message: "ok",
-        data: "test api"
-    })
-}
+
 
 
 const handleRegister = async (req, res) => {
@@ -189,5 +184,5 @@ const handleIPN = async (req, res) => {
 };
 
 module.exports = {
-    testApi, handleRegister, handleLogin, handlegetPaymentmethod, handleOrder, handleOrderpay, handleIPN, handleShowOrderUser
+    handleRegister, handleLogin, handlegetPaymentmethod, handleOrder, handleOrderpay, handleIPN, handleShowOrderUser
 }

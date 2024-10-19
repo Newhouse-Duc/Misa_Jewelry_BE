@@ -13,7 +13,7 @@ const router = express.Router();
 const initapiRoute = (app) => {
 
 
-    router.get("/test_api", apiController.testApi)
+
     router.post("/register", apiController.handleRegister)
     router.post("/login", apiController.handleLogin)
 

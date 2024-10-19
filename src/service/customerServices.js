@@ -287,10 +287,8 @@ const useOrderpay = async (dataorder) => {
     const transaction = await db.sequelize.transaction();
     try {
 
-        const max_id = await db.Order.max("id");
 
         const newOrder = await db.Order.create({
-            id: max_id + 1,
             user_id: dataorder.raworder.userid,
             name_receive: dataorder.raworder.namerecive,
             phone_receive: dataorder.raworder.phonerecive,
@@ -375,6 +373,11 @@ const useOrderpay = async (dataorder) => {
         }
     } catch (error) {
         console.log("lỗi: ", error)
+        await transaction.rollback();
+        return {
+            EM: 'Có lỗi xảy ra, giao dịch không thành công!',
+            EC: -1,
+        };
     }
 
 }
@@ -405,7 +408,6 @@ const handleMomoIPN = async (ipnData) => {
 
 
     } catch (error) {
-
         return {
             EM: ' Lỗi sửa trạng thái đơn hàng',
             EC: -2,
